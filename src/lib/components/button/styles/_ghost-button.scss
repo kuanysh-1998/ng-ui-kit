@@ -1,0 +1,97 @@
+@mixin ghost-button($type) {
+  $bg-hover: null;
+  $bg-focused: null;
+  $bg-active: null;
+  $color: null;
+  $color-disabled: null;
+
+  @if $type == default {
+    $bg-hover: var(--brand-blue-10);
+    $bg-focused: var(--brand-blue-40);
+    $bg-active: var(--brand-blue-10);
+    $color: var(--brand-blue);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == secondary {
+    $bg-disabled: var(--gray-100);
+    $bg-focused: #dee1e7;
+    $bg-disabled: var(--gray-100);
+
+    $color: var(--almost-black, #030405);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == alternative {
+    $bg-hover: #dee1e7;
+    $bg-focused: #c9cfd7;
+    $bg-active: #dee1e7;
+    $color: #060607;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == success {
+    $bg-hover: var(--success-green-10, #eafbe7);
+    $bg-focused: var(--success-green-40, rgba(50, 128, 72, 0.16));
+    $bg-active: var(--success-green-10, #eafbe7);
+
+    $color: var(--success-green);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == info {
+    $bg-hover: #eaf5ff;
+    $bg-focused: #b8e1ff;
+    $bg-active: #eaf5ff;
+    $color: var(--info-500);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == warning {
+    $bg-hover: #fdf4dc;
+    $bg-focused: #fae7b9;
+    $bg-active: #fdf4dc;
+    $color: #d9822f;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == danger {
+    $bg-hover: #fcecea;
+    $bg-focused: #f5c0b8;
+    $bg-active: #fcecea;
+    $color: #d02b20;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == help {
+    $bg-hover: #f6ecfc;
+    $bg-focused: #e0c1f4;
+    $bg-active: #f6ecfc;
+    $color: #9736e8;
+    $color-disabled: var(--text-disabled);
+  }
+
+  color: $color;
+  background-color: transparent;
+  border: transparent;
+
+  .ng-button__icon {
+    color: var(--button-icon-color, #{$color});
+  }
+
+  &:hover {
+    color: $color;
+    background-color: $bg-hover;
+    border: transparent;
+  }
+
+  &:focus:not(.ng-button__container_without-focus) {
+    color: $color;
+    background-color: $bg-focused;
+    border: transparent;
+    outline: none;
+  }
+
+  &:active {
+    color: $color;
+    background-color: $bg-active;
+    border: transparent;
+  }
+
+  &.ng-button__container_disabled.ng-button__container_override {
+    color: $color-disabled;
+    cursor: default;
+    background-color: transparent;
+    border: transparent;
+
+    .ng-button__icon {
+      color: $color-disabled;
+    }
+  }
+}

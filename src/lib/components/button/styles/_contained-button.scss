@@ -1,0 +1,114 @@
+@mixin contained-button($type) {
+  $bg-rest: null;
+  $bg-hover: null;
+  $bg-focused: null;
+  $bg-active: null;
+  $bg-disabled: null;
+  $color: null;
+  $color-disabled: null;
+
+  @if $type == default {
+    $bg-rest: var(--brand-blue);
+    $bg-hover: var(--brand-blue-hover);
+    $bg-focused: var(--brand-blue-active);
+    $bg-active: var(--brand-blue-active);
+    $bg-disabled: var(--gray-100);
+    $color: var(--white);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == secondary {
+    $bg-rest: var(--gray-border);
+    $bg-hover: var(--neutral-300);
+    $bg-focused: var(--neutral-400);
+    $bg-active: var(--neutral-300);
+    $bg-disabled: var(--gray-100);
+
+    $color: var(--almost-black);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == alternative {
+    $bg-rest: var(--neutral-700);
+    $bg-hover: var(--neutral-650);
+    $bg-focused: var(--neutral-650);
+    $bg-active: var(--neutral-800);
+    $bg-disabled: var(--gray-100);
+    $color: var(--divider-gray);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == success {
+    $bg-rest: var(--success-green);
+    $bg-hover: var(--success-green-dark);
+    $bg-focused: var(--success-green-dark);
+    $bg-active: var(--success-green-dark);
+    $bg-disabled: var(--gray-border);
+    $color: var(--white);
+    $color-disabled: var(--almost-black);
+  } @else if $type == info {
+    $bg-rest: var(--info-500);
+    $bg-hover: #006096;
+    $bg-focused: #003f63;
+    $bg-active: #006096;
+    $bg-disabled: var(--gray-100);
+    $color: #ffffff;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == warning {
+    $bg-rest: #d9822f;
+    $bg-hover: #be5d01;
+    $bg-focused: #8c4400;
+    $bg-active: #be5d01;
+    $bg-disabled: var(--gray-100);
+    $color: #ffffff;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == danger {
+    $bg-rest: #d02b20;
+    $bg-hover: #b72b1a;
+    $bg-focused: #741509;
+    $bg-active: #b72b1a;
+    $bg-disabled: var(--gray-100);
+    $color: #ffffff;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == help {
+    $bg-rest: #9736e8;
+    $bg-hover: #8312d1;
+    $bg-focused: #4e0382;
+    $bg-active: #8312d1;
+    $bg-disabled: var(--gray-100);
+    $color: #ffffff;
+    $color-disabled: var(--text-disabled);
+  }
+
+  color: $color;
+  background-color: $bg-rest;
+  border: 1px solid $bg-rest;
+
+  .ng-button__icon {
+    color: var(--button-icon-color, #{$color});
+  }
+
+  &:hover {
+    color: $color;
+    background-color: $bg-hover;
+    border: 1px solid $bg-hover;
+  }
+
+  &:focus:not(.ng-button__container_without-focus) {
+    color: $color;
+    background-color: $bg-focused;
+    border: 1px solid $bg-focused;
+    outline: none;
+  }
+
+  &:active {
+    color: $color;
+    background-color: $bg-active;
+    border: 1px solid $bg-active;
+  }
+
+  &.ng-button__container_disabled.ng-button__container_override {
+    color: $color-disabled;
+    cursor: default;
+    background-color: $bg-disabled;
+    border: 1px solid $bg-disabled;
+
+    .ng-button__icon {
+      color: $color-disabled;
+    }
+  }
+}

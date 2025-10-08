@@ -1,0 +1,33 @@
+<div class="ng-button">
+  <button
+    [attr.data-token]="token"
+    [ngClass]="buttonClasses"
+    (click)="click($event)"
+    (keydown)="preventEnterKey($event)"
+    tabindex="-1"
+    type="button"
+    class="ng-button__container"
+    [style.height]="height || null"
+    [style.width]="width || null"
+  >
+    @if (icon) {
+    <ng-svg
+      [width]="iconWidth"
+      [height]="iconHeight"
+      class="ng-button__icon"
+      [icon]="icon"
+    ></ng-svg>
+    }
+
+    {{ label }}
+
+    @if (!label) {
+    <ng-content></ng-content>
+    } @if (rightIcon) {
+    <ng-svg
+      class="ng-button__icon ng-button__icon_right"
+      [icon]="rightIcon"
+    ></ng-svg>
+    }
+  </button>
+</div>

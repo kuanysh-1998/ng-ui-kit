@@ -1,0 +1,1083 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "App",
+            "id": "component-App-2adcaed2ea00909e845075af46e994ca8e5042055e7122ad7a38d736bf8db56bd55b3a03db1257f0921c727194002760eaf030460fbf3cce0110256d097fb7bc",
+            "file": "src/app/app.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "signal(\"ng-ui-kit\")",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        124,
+                        148
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, signal } from \"@angular/core\";\r\nimport { RouterOutlet } from \"@angular/router\";\r\nimport { CommonModule } from \"@angular/common\";\r\n\r\n@Component({\r\n  selector: \"app-root\",\r\n  imports: [RouterOutlet, CommonModule],\r\n  templateUrl: \"./app.html\",\r\n  styleUrl: \"./app.scss\",\r\n})\r\nexport class App {\r\n  protected readonly title = signal(\"ng-ui-kit\");\r\n}\r\n",
+            "styleUrl": "./app.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<router-outlet />\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-f3064095f1865f1f5fbf3b048b52b7f2e596500c44c21a6161542e712a23d10e72a387dd60fee42564c04465857ac982404276ede1f63247a022fd751ea8ef54",
+            "file": "src/lib/components/button/button.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-button",
+            "styleUrls": [
+                "./styles/button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "active",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "clickOnEnterEnabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "fullHeight",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "fullWidth",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "undefined",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "iconHeight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "iconWidth",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isIcon",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "rightIcon",
+                    "defaultValue": "undefined",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "\"default\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 34,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "stylingMode",
+                    "defaultValue": "\"contained\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "token",
+                    "defaultValue": "undefined",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "\"default\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "clicked",
+                    "defaultValue": "new EventEmitter<PointerEvent | MouseEvent>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "click",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "PointerEvent | MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        124
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "PointerEvent | MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "preventEnterKey",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "KeyboardEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 80,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        124
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "KeyboardEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "style.width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "string | null",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "SvgComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from \"@angular/common\";\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  EventEmitter,\r\n  HostBinding,\r\n  Input,\r\n  Output,\r\n} from \"@angular/core\";\r\nimport { SvgComponent } from \"../svg/svg.component\";\r\n\r\n@Component({\r\n  selector: \"ng-button\",\r\n  imports: [CommonModule, SvgComponent],\r\n  templateUrl: \"./button.component.html\",\r\n  styleUrls: [\"./styles/button.component.scss\"],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ButtonComponent {\r\n  @Input() public active = false;\r\n  @Input() height?: string;\r\n  @Input() width?: string;\r\n  @Input() public label = \"\";\r\n  @Input() public variant = \"default\";\r\n  @Input() public stylingMode = \"contained\";\r\n  @Input() public fullWidth = false;\r\n  @Input() public fullHeight = false;\r\n  @Input() public disabled = false;\r\n  @Input() public isIcon = false;\r\n\r\n  @Input() public icon = undefined;\r\n  @Input() public rightIcon = undefined;\r\n  @Input() public token = undefined;\r\n  @Input() public size = \"default\";\r\n  @Input() iconWidth?: string;\r\n  @Input() iconHeight?: string;\r\n\r\n  @Input() public clickOnEnterEnabled = true;\r\n\r\n  @Output() public clicked = new EventEmitter<PointerEvent | MouseEvent>();\r\n\r\n  @HostBinding(\"style.width\")\r\n  protected get widthStyle(): string | null {\r\n    if (this.fullWidth) return \"100%\";\r\n    if (this.width) return this.width;\r\n    return null;\r\n  }\r\n\r\n  protected get isIconButton(): boolean {\r\n    return (\r\n      this.isIcon ||\r\n      (!!this.icon && !this.label && !this.rightIcon) ||\r\n      (!!this.rightIcon && !this.label && !this.icon) ||\r\n      typeof this.label === \"number\"\r\n    );\r\n  }\r\n\r\n  protected get buttonClasses(): Record<string, boolean> {\r\n    return {\r\n      [`ng-button__container_${this.variant}`]: true,\r\n      [`ng-button__container_full-width`]: this.fullWidth,\r\n      [`ng-button__container_full-height`]: this.fullHeight,\r\n      [`ng-button__container_${this.stylingMode}`]: true,\r\n      [`ng-button__container_size-${this.size}`]: true,\r\n      [\"ng-button__container_with-icon\"]: !!this.icon || !!this.rightIcon,\r\n      [\"ng-button__container_without-label\"]: !this.label,\r\n      [\"ng-button__container_without-focus\"]: !this.clickOnEnterEnabled,\r\n      [\"ng-button__container_icon-button\"]: this.isIconButton,\r\n      [\"ng-button__container_disabled\"]: this.disabled,\r\n      [\"ng-button__container_override\"]: this.disabled,\r\n      [\"ng-button__container_active\"]: this.active,\r\n    };\r\n  }\r\n\r\n  protected click(event: PointerEvent | MouseEvent): void {\r\n    if (this.disabled) return;\r\n    this.clicked.emit(event);\r\n  }\r\n\r\n  protected preventEnterKey(event: KeyboardEvent): void {\r\n    if (event.key === \"Enter\" && !this.clickOnEnterEnabled) {\r\n      event.preventDefault();\r\n      event.stopPropagation();\r\n    }\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@use \"contained-button\";\r\n@use \"outlined-button\";\r\n@use \"ghost-button\";\r\n\r\n@mixin button($variant) {\r\n  &.ng-button__container_contained {\r\n    @include contained-button.contained-button($variant);\r\n  }\r\n\r\n  &.ng-button__container_outlined {\r\n    @include outlined-button.outlined-button($variant);\r\n  }\r\n\r\n  &.ng-button__container_ghost {\r\n    @include ghost-button.ghost-button($variant);\r\n  }\r\n}\r\n\r\n.ng-button {\r\n  display: block;\r\n  flex-shrink: 0;\r\n\r\n  &__container {\r\n    all: unset;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    flex-shrink: 0;\r\n    flex-wrap: nowrap;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: inherit;\r\n    white-space: nowrap;\r\n    cursor: pointer;\r\n    background-color: transparent;\r\n    border-color: transparent;\r\n    border-radius: 8px;\r\n    transition: all 0.2s;\r\n\r\n    &_active {\r\n      box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--highlight-border);\r\n    }\r\n\r\n    &_size-medium {\r\n      gap: 0.5rem;\r\n      height: 2.125rem;\r\n      padding: 0.5rem 1rem;\r\n      font-size: 0.875rem;\r\n      line-height: 1.25rem;\r\n      font-family: \"PT Root UI\", sans-serif;\r\n    }\r\n\r\n    &_size-small {\r\n      gap: 0.375rem;\r\n      height: 2rem;\r\n      padding: 0.375rem 0.75rem;\r\n      font-weight: 500;\r\n      font-size: 0.75rem;\r\n      line-height: 1rem;\r\n      font-family: PTRootUIMedium;\r\n\r\n      &.ng-button__container_with-icon {\r\n        padding: 0.375rem 0.5rem;\r\n      }\r\n\r\n      &.ng-button__container_icon-button {\r\n        min-width: 2rem;\r\n        padding: 0.5rem calc(0.25rem - 1px);\r\n      }\r\n    }\r\n\r\n    &_size-xlarge {\r\n      gap: 0.625rem;\r\n      height: 3rem;\r\n      padding: 0.375rem 1.5rem;\r\n      font-size: 1rem;\r\n      line-height: 1.375rem;\r\n      font-family: PTRootUIBold;\r\n\r\n      &.ng-button__container_with-icon {\r\n        padding: 0.375rem 1.25rem;\r\n      }\r\n\r\n      &.ng-button__container_icon-button {\r\n        min-width: 3rem;\r\n        padding: 0.5rem calc(0.5rem - 1px);\r\n      }\r\n    }\r\n\r\n    &_size-large {\r\n      gap: 0.625rem;\r\n      height: 2.75rem;\r\n      padding: 0.375rem 1.25rem;\r\n      font-size: 0.875rem;\r\n      line-height: 1.25rem;\r\n      font-family: PTRootUIBold;\r\n\r\n      &.ng-button__container_with-icon {\r\n        padding: 0.375rem 1rem;\r\n      }\r\n\r\n      &.ng-button__container_icon-button {\r\n        min-width: 2.75rem;\r\n        padding: 0.5rem calc(0.5rem - 1px);\r\n      }\r\n    }\r\n\r\n    &_size-default {\r\n      gap: 0.5rem;\r\n      height: 2.25rem;\r\n      padding: 0.5rem 1rem;\r\n      font-size: 0.875rem;\r\n      line-height: 1.25rem;\r\n      font-family: \"PT Root UI\", sans-serif;\r\n    }\r\n\r\n    &_with-icon {\r\n      padding: 0.5rem 0.75rem;\r\n    }\r\n\r\n    &_without-label {\r\n      padding: 0.5rem 0.5rem;\r\n    }\r\n\r\n    &_icon-button {\r\n      min-width: 2.25rem;\r\n      padding: 0.5rem calc(0.5rem - 1px);\r\n    }\r\n\r\n    &_full-width {\r\n      width: 100%;\r\n    }\r\n\r\n    &_full-height {\r\n      width: 100%;\r\n    }\r\n\r\n    &_default {\r\n      @include button(\"default\");\r\n    }\r\n\r\n    &_secondary {\r\n      @include button(\"secondary\");\r\n    }\r\n\r\n    &_alternative {\r\n      @include button(\"alternative\");\r\n    }\r\n\r\n    &_success {\r\n      @include button(\"success\");\r\n    }\r\n\r\n    &_info {\r\n      @include button(\"info\");\r\n    }\r\n\r\n    &_warning {\r\n      @include button(\"warning\");\r\n    }\r\n\r\n    &_danger {\r\n      @include button(\"danger\");\r\n    }\r\n\r\n    &_help {\r\n      @include button(\"help\");\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./styles/button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "widthStyle": {
+                    "name": "widthStyle",
+                    "getSignature": {
+                        "name": "widthStyle",
+                        "type": "",
+                        "returnType": "string | null",
+                        "line": 43
+                    }
+                },
+                "isIconButton": {
+                    "name": "isIconButton",
+                    "getSignature": {
+                        "name": "isIconButton",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 49
+                    }
+                },
+                "buttonClasses": {
+                    "name": "buttonClasses",
+                    "getSignature": {
+                        "name": "buttonClasses",
+                        "type": "",
+                        "returnType": "Record<string, boolean>",
+                        "line": 58
+                    }
+                }
+            },
+            "templateData": "<div class=\"ng-button\">\r\n  <button\r\n    [attr.data-token]=\"token\"\r\n    [ngClass]=\"buttonClasses\"\r\n    (click)=\"click($event)\"\r\n    (keydown)=\"preventEnterKey($event)\"\r\n    tabindex=\"-1\"\r\n    type=\"button\"\r\n    class=\"ng-button__container\"\r\n    [style.height]=\"height || null\"\r\n    [style.width]=\"width || null\"\r\n  >\r\n    @if (icon) {\r\n    <ng-svg\r\n      [width]=\"iconWidth\"\r\n      [height]=\"iconHeight\"\r\n      class=\"ng-button__icon\"\r\n      [icon]=\"icon\"\r\n    ></ng-svg>\r\n    }\r\n\r\n    {{ label }}\r\n\r\n    @if (!label) {\r\n    <ng-content></ng-content>\r\n    } @if (rightIcon) {\r\n    <ng-svg\r\n      class=\"ng-button__icon ng-button__icon_right\"\r\n      [icon]=\"rightIcon\"\r\n    ></ng-svg>\r\n    }\r\n  </button>\r\n</div>\r\n"
+        },
+        {
+            "name": "SvgComponent",
+            "id": "component-SvgComponent-46f787988cb2bb2650e5516772db0c58c888190b49a17cd61f9666b3fce2d7d28737caec6811ec9ede1ed99e097f2417cdfa47091a3785c572102f9b66d136e1",
+            "file": "src/lib/components/svg/svg.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-svg",
+            "styleUrls": [
+                "./svg.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./svg.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "ariaLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "basePath",
+                    "defaultValue": "\"assets/svg\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "Icons | string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "\"default\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "IconSize",
+                    "decorators": []
+                },
+                {
+                    "name": "token",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "wrapperHeight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "wrapperWidth",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "defaultIcons",
+                    "defaultValue": "{}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial<Record<Icons, TemplateRef<>>>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 47,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "role",
+                    "defaultValue": "\"img\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 39,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'attr.role'"
+                        }
+                    ],
+                    "modifierKind": [
+                        171
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "attr.aria-hidden",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "attr.aria-label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "attr.role",
+                    "defaultValue": "\"img\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "style.color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 62,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "style.height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 59,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "style.width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 56,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "AngularSvgIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from \"@angular/common\";\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n  TemplateRef,\r\n  ViewEncapsulation,\r\n} from \"@angular/core\";\r\nimport { AngularSvgIconModule } from \"angular-svg-icon\";\r\n\r\nimport { ICON_DEFAULT_SIZE, Icons, IconSize } from \"./svg.config\";\r\n\r\n@Component({\r\n  selector: \"ng-svg\",\r\n  standalone: true,\r\n  imports: [CommonModule, AngularSvgIconModule],\r\n  templateUrl: \"./svg.component.html\",\r\n  styleUrls: [\"./svg.component.scss\"],\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class SvgComponent {\r\n  @Input() icon?: Icons | string;\r\n\r\n  @Input() basePath = \"assets/svg\";\r\n\r\n  @Input() size: IconSize = \"default\";\r\n  @Input() color?: string;\r\n  @Input() token?: string;\r\n\r\n  @Input() width?: string;\r\n  @Input() height?: string;\r\n\r\n  @Input() wrapperWidth?: string;\r\n  @Input() wrapperHeight?: string;\r\n\r\n  @Input() ariaLabel?: string;\r\n  @HostBinding(\"attr.role\") role = \"img\";\r\n  @HostBinding(\"attr.aria-hidden\") get ariaHidden() {\r\n    return this.ariaLabel ? null : \"true\";\r\n  }\r\n  @HostBinding(\"attr.aria-label\") get ariaLabelAttr() {\r\n    return this.ariaLabel ?? null;\r\n  }\r\n\r\n  public defaultIcons: Partial<Record<Icons, TemplateRef<unknown>>> = {};\r\n\r\n  private get _resolvedWidth(): string {\r\n    return this.width ?? ICON_DEFAULT_SIZE[this.size].width;\r\n  }\r\n  private get _resolvedHeight(): string {\r\n    return this.height ?? ICON_DEFAULT_SIZE[this.size].height;\r\n  }\r\n\r\n  @HostBinding(\"style.width\") get hostWidth() {\r\n    return this.wrapperWidth ?? this._resolvedWidth;\r\n  }\r\n  @HostBinding(\"style.height\") get hostHeight() {\r\n    return this.wrapperHeight ?? this._resolvedHeight;\r\n  }\r\n  @HostBinding(\"style.color\") get hostColor() {\r\n    return this.color ?? null;\r\n  }\r\n\r\n  public get defaultIcon(): TemplateRef<unknown> | null {\r\n    if (!this.icon) return null;\r\n    return this.defaultIcons[this.icon as Icons] ?? null;\r\n  }\r\n\r\n  public get iconWidth() {\r\n    return this._resolvedWidth;\r\n  }\r\n  public get iconHeight() {\r\n    return this._resolvedHeight;\r\n  }\r\n\r\n  private get iconName(): string | null {\r\n    return this.icon ? String(this.icon) : null;\r\n  }\r\n\r\n  public get isSvg(): boolean {\r\n    const src = this.iconSrc;\r\n    if (!src) return false;\r\n    return /\\.svg($|\\?)/i.test(src);\r\n  }\r\n\r\n  public get iconSrc(): string | null {\r\n    const name = this.iconName;\r\n    if (!name) return null;\r\n    const hasExt = /\\.[a-z0-9]+$/i.test(name);\r\n    const file = hasExt ? name : `${name}.svg`;\r\n    return `${this.basePath}/${file}`;\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\r\n  display: inline-flex;\r\n  flex-shrink: 0;\r\n}\r\n\r\n:host svg,\r\n:host svg-icon,\r\n:host img {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: block;\r\n}\r\n",
+                    "styleUrl": "./svg.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "ariaHidden": {
+                    "name": "ariaHidden",
+                    "getSignature": {
+                        "name": "ariaHidden",
+                        "type": "",
+                        "returnType": "",
+                        "line": 40
+                    }
+                },
+                "ariaLabelAttr": {
+                    "name": "ariaLabelAttr",
+                    "getSignature": {
+                        "name": "ariaLabelAttr",
+                        "type": "",
+                        "returnType": "",
+                        "line": 43
+                    }
+                },
+                "_resolvedWidth": {
+                    "name": "_resolvedWidth",
+                    "getSignature": {
+                        "name": "_resolvedWidth",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 49
+                    }
+                },
+                "_resolvedHeight": {
+                    "name": "_resolvedHeight",
+                    "getSignature": {
+                        "name": "_resolvedHeight",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 52
+                    }
+                },
+                "hostWidth": {
+                    "name": "hostWidth",
+                    "getSignature": {
+                        "name": "hostWidth",
+                        "type": "",
+                        "returnType": "",
+                        "line": 56
+                    }
+                },
+                "hostHeight": {
+                    "name": "hostHeight",
+                    "getSignature": {
+                        "name": "hostHeight",
+                        "type": "",
+                        "returnType": "",
+                        "line": 59
+                    }
+                },
+                "hostColor": {
+                    "name": "hostColor",
+                    "getSignature": {
+                        "name": "hostColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 62
+                    }
+                },
+                "defaultIcon": {
+                    "name": "defaultIcon",
+                    "getSignature": {
+                        "name": "defaultIcon",
+                        "type": "",
+                        "returnType": "TemplateRef | null",
+                        "line": 66
+                    }
+                },
+                "iconWidth": {
+                    "name": "iconWidth",
+                    "getSignature": {
+                        "name": "iconWidth",
+                        "type": "",
+                        "returnType": "",
+                        "line": 71
+                    }
+                },
+                "iconHeight": {
+                    "name": "iconHeight",
+                    "getSignature": {
+                        "name": "iconHeight",
+                        "type": "",
+                        "returnType": "",
+                        "line": 74
+                    }
+                },
+                "iconName": {
+                    "name": "iconName",
+                    "getSignature": {
+                        "name": "iconName",
+                        "type": "",
+                        "returnType": "string | null",
+                        "line": 78
+                    }
+                },
+                "isSvg": {
+                    "name": "isSvg",
+                    "getSignature": {
+                        "name": "isSvg",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 82
+                    }
+                },
+                "iconSrc": {
+                    "name": "iconSrc",
+                    "getSignature": {
+                        "name": "iconSrc",
+                        "type": "",
+                        "returnType": "string | null",
+                        "line": 88
+                    }
+                }
+            },
+            "templateData": "@if (defaultIcon; as tmpl) {\r\n<ng-container *ngTemplateOutlet=\"tmpl\"></ng-container>\r\n} @else if (iconSrc) { @if (isSvg) {\r\n<svg-icon\r\n  [ngStyle]=\"{ width: iconWidth, height: iconHeight, display: 'flex' }\"\r\n  [svgStyle]=\"{ width: iconWidth, height: iconHeight, fill: color }\"\r\n  [src]=\"iconSrc\"\r\n  [attr.data-token]=\"token\"\r\n>\r\n</svg-icon>\r\n} @else {\r\n<img\r\n  [src]=\"iconSrc\"\r\n  [style.width]=\"iconWidth\"\r\n  [style.height]=\"iconHeight\"\r\n  [attr.alt]=\"ariaLabel ?? ''\"\r\n/>\r\n} } @else { }\r\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideZoneChangeDetection({ eventCoalescing: true }),\r\n    provideRouter(routes),\r\n    provideHttpClient(),\r\n    provideAngularSvgIcon(),\r\n  ],\r\n}"
+            },
+            {
+                "name": "ICON_DEFAULT_SIZE",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/components/svg/svg.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\r\n  default: { width: \"1.25rem\", height: \"1.25rem\" },\r\n  small: { width: \"1rem\", height: \"1rem\" },\r\n  large: { width: \"1.5rem\", height: \"1.5rem\" },\r\n} as const"
+            },
+            {
+                "name": "routes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Routes",
+                "defaultValue": "[]"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "ButtonSettings",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/lib/components/button/button.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 188
+            },
+            {
+                "name": "IconSize",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "src/lib/components/svg/svg.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 199
+            },
+            {
+                "name": "StilingModeButton",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"contained\" | \"outlined\" | \"ghost\"",
+                "file": "src/lib/components/button/button.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "SvgSettings",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/lib/components/svg/svg.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 188
+            },
+            {
+                "name": "VariantButton",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"default\" | \"secondary\" | \"alternative\" | \"success\" | \"info\" | \"warning\" | \"danger\" | \"help\"",
+                "file": "src/lib/components/button/button.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            }
+        ],
+        "enumerations": [
+            {
+                "name": "Icons",
+                "childs": [
+                    {
+                        "name": "Spinner",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "i_spinner"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/lib/components/svg/svg.config.ts"
+            }
+        ],
+        "groupedVariables": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideZoneChangeDetection({ eventCoalescing: true }),\r\n    provideRouter(routes),\r\n    provideHttpClient(),\r\n    provideAngularSvgIcon(),\r\n  ],\r\n}"
+                }
+            ],
+            "src/lib/components/svg/svg.config.ts": [
+                {
+                    "name": "ICON_DEFAULT_SIZE",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/components/svg/svg.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\r\n  default: { width: \"1.25rem\", height: \"1.25rem\" },\r\n  small: { width: \"1rem\", height: \"1rem\" },\r\n  large: { width: \"1.5rem\", height: \"1.5rem\" },\r\n} as const"
+                }
+            ],
+            "src/app/app.routes.ts": [
+                {
+                    "name": "routes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Routes",
+                    "defaultValue": "[]"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {
+            "src/lib/components/svg/svg.config.ts": [
+                {
+                    "name": "Icons",
+                    "childs": [
+                        {
+                            "name": "Spinner",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "i_spinner"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/lib/components/svg/svg.config.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {
+            "src/lib/components/button/button.types.ts": [
+                {
+                    "name": "ButtonSettings",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/lib/components/button/button.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 188
+                },
+                {
+                    "name": "StilingModeButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"contained\" | \"outlined\" | \"ghost\"",
+                    "file": "src/lib/components/button/button.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                },
+                {
+                    "name": "VariantButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"default\" | \"secondary\" | \"alternative\" | \"success\" | \"info\" | \"warning\" | \"danger\" | \"help\"",
+                    "file": "src/lib/components/button/button.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ],
+            "src/lib/components/svg/svg.config.ts": [
+                {
+                    "name": "IconSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "src/lib/components/svg/svg.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 199
+                }
+            ],
+            "src/lib/components/svg/svg.types.ts": [
+                {
+                    "name": "SvgSettings",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/lib/components/svg/svg.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 188
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "routes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "App",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/22",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/button/button.types.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ButtonSettings",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/button/button.types.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "StilingModeButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/button/button.types.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "VariantButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/svg/svg.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SvgComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/19",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/svg/svg.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ICON_DEFAULT_SIZE",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/svg/svg.config.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "IconSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/components/svg/svg.types.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "SvgSettings",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

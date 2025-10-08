@@ -1,0 +1,120 @@
+@mixin outlined-button($type) {
+  $bg-hover: null;
+  $bg-focused: null;
+  $bg-active: null;
+  $stroke-rest: null;
+  $stroke-disabled: null;
+  $color: null;
+  $color-disabled: null;
+
+  @if $type == default {
+    $bg-hover: var(--brand-blue-10);
+    $bg-focused: var(--brand-blue-40);
+    $bg-active: var(--brand-blue-10);
+    $stroke-rest: var(--brand-blue);
+    $bg-disabled: var(--gray-100);
+    $color: var(--brand-blue);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == secondary {
+    $bg-hover: var(--gray-lightest);
+    $bg-focused: var(--neutral-300);
+    $bg-active: var(--neutral-400);
+
+    $stroke-rest: var(--gray-border-light);
+    $stroke-disabled: var(--divider-gray);
+
+    $bg-disabled: var(--gray-100, #f3f4f6);
+    $color: var(--almost-black);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == alternative {
+    $bg-hover: #dee1e7;
+    $bg-focused: #c9cfd7;
+    $bg-active: #dee1e7;
+    $stroke-rest: #3d4148;
+    $bg-disabled: var(--gray-100);
+    $color: #060607;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == success {
+    $bg-hover: var(--success-green-10, #eafbe7);
+    $bg-focused: var(--success-green-40, rgba(50, 128, 72, 0.16));
+    $bg-active: var(--success-green-10, #eafbe7);
+
+    $stroke-rest: var(--success-green, #328048);
+    $stroke-disabled: var(--gray-100);
+
+    $color: var(--success-green, #328048);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == info {
+    $bg-hover: #eaf5ff;
+    $bg-focused: #b8e1ff;
+    $bg-active: #eaf5ff;
+    $stroke-rest: var(--info-500);
+    $bg-disabled: var(--gray-100);
+    $color: var(--info-500);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == warning {
+    $bg-hover: #fdf4dc;
+    $bg-focused: #fae7b9;
+    $bg-active: #fdf4dc;
+    $stroke-rest: #d9822f;
+    $bg-disabled: var(--gray-100);
+    $color: #d9822f;
+    $color-disabled: var(--text-disabled);
+  } @else if $type == danger {
+    $bg-hover: var(--error-red-10);
+    $bg-focused: var(--error-red-light);
+    $bg-active: var(--error-red-10);
+
+    $stroke-rest: var(--error-red);
+    $bg-disabled: var(--gray-100);
+
+    $color: var(--error-red);
+    $color-disabled: var(--text-disabled);
+  } @else if $type == help {
+    $bg-hover: #f6ecfc;
+    $bg-focused: #e0c1f4;
+    $bg-active: #f6ecfc;
+    $stroke-rest: #9736e8;
+    $bg-disabled: var(--gray-100);
+    $color: #9736e8;
+    $color-disabled: var(--text-disabled);
+  }
+
+  color: $color;
+  background: transparent;
+  border: 1px solid $stroke-rest;
+
+  .ng-button__icon {
+    color: var(--button-icon-color, #{$color});
+  }
+
+  &:hover {
+    color: $color;
+    background-color: $bg-hover;
+    border: 1px solid $stroke-rest;
+  }
+
+  &:focus:not(.ng-button__container_without-focus) {
+    color: $color;
+    background-color: $bg-focused;
+    border: 1px solid $stroke-rest;
+    outline: none;
+  }
+
+  &:active {
+    color: $color;
+    background-color: $bg-active;
+    border: 1px solid $stroke-rest;
+  }
+
+  &.ng-button__container_disabled.ng-button__container_override {
+    color: $color-disabled;
+    cursor: default;
+    background-color: transparent;
+    border: 1px solid $stroke-disabled;
+
+    .ng-button__icon {
+      color: $color-disabled;
+    }
+  }
+}

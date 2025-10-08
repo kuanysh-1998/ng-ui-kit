@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+// Импорт переменных и стилей из assets
+@use "assets/styles/index";
+
+* {
+  &::-webkit-scrollbar-button {
+    display: none;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    display: none;
+    background: transparent;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+    background-color: transparent;
+
+    &:hover {
+      height: 6px;
+    }
+  }
+
+  *::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
