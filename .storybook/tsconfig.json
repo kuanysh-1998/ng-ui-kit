@@ -1,11 +1,17 @@
 {
-  "extends": "../tsconfig.app.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["node"],
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "outDir": "../out-tsc/storybook",
+    "types": ["node"]
   },
-  "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-  "include": ["../src/**/*.stories.*", "./preview.ts"],
-  "files": ["./typings.d.ts"]
+  "include": [
+    "../projects/ng-ui-kit-lib/src/**/*.ts",
+    "../projects/ng-ui-kit-lib/src/**/*.stories.ts",
+    "../projects/ng-ui-kit-lib/src/**/*.stories.tsx",
+    "../projects/ng-ui-kit-lib/src/**/*.stories.js",
+    "../projects/ng-ui-kit-lib/src/**/*.stories.jsx",
+    "../projects/ng-ui-kit-lib/src/**/*.mdx",
+    "./**/*.ts"
+  ],
+  "exclude": ["../projects/ng-ui-kit-lib/src/**/*.spec.ts"]
 }

@@ -1,7 +1,10 @@
 import type { StorybookConfig } from "@storybook/angular";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../projects/ng-ui-kit-lib/src/**/*.mdx",
+    "../projects/ng-ui-kit-lib/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: ["@storybook/addon-docs", "@storybook/addon-onboarding"],
   framework: {
     name: "@storybook/angular",
@@ -9,18 +12,25 @@ const config: StorybookConfig = {
       enableIvy: true,
     },
   },
-  staticDirs: ["../src/assets"],
+  staticDirs: ["../projects/ng-ui-kit-lib/src/assets"],
   typescript: {
     check: false,
   },
-  webpackFinal: async (config) => {
+  
+  webpackFinal: async (config, { configType }) => {
     config.resolve = config.resolve || {};
     config.resolve.fallback = {
       ...config.resolve.fallback,
       process: false,
     };
 
+    if (configType === 'PRODUCTION') {
+      config.output = config.output || {};
+      config.output.publicPath = '/ng-ui-kit/';
+    }
+
     return config;
   },
 };
+
 export default config;

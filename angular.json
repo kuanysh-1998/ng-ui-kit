@@ -11,13 +11,14 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "projects/ng-ui-kit-lib/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "browser": "projects/ng-ui-kit-lib/src/main.ts",
+            "index": "projects/ng-ui-kit-lib/src/index.html",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -28,11 +29,11 @@
               },
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "projects/ng-ui-kit-lib/src/assets",
                 "output": "assets"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["projects/ng-ui-kit-lib/src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -85,7 +86,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["projects/ng-ui-kit-lib/src/styles.scss"]
           }
         },
         "storybook": {
@@ -95,7 +96,8 @@
             "browserTarget": "ng-ui-kit:build",
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "."],
-            "port": 6006
+            "port": 6006,
+            "tsConfig": ".storybook/tsconfig.json"
           }
         },
         "build-storybook": {
@@ -105,7 +107,8 @@
             "browserTarget": "ng-ui-kit:build",
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "."],
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "tsConfig": ".storybook/tsconfig.json"
           }
         }
       }
