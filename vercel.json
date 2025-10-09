@@ -6,8 +6,15 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!.*\\.(js|css|woff|woff2|svg|png|jpg|jpeg|gif|ico|json|map|html)).*)$",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "text/html"
+        }
+      ]
     }
   ]
 }
