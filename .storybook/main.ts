@@ -16,18 +16,13 @@ const config: StorybookConfig = {
   typescript: {
     check: false,
   },
-  
+
   webpackFinal: async (config, { configType }) => {
     config.resolve = config.resolve || {};
     config.resolve.fallback = {
       ...config.resolve.fallback,
       process: false,
     };
-
-    if (configType === 'PRODUCTION') {
-      config.output = config.output || {};
-      config.output.publicPath = '/ng-ui-kit/';
-    }
 
     return config;
   },
