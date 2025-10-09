@@ -1,0 +1,74 @@
+// IBM Plex Sans
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/assets/font/IBMPlexSans/IBMPlexSans-Regular.woff2") format("woff2"),
+    url("/assets/font/IBMPlexSans/IBMPlexSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/assets/font/IBMPlexSans/IBMPlexSans-Medium.woff2") format("woff2"),
+    url("/assets/font/IBMPlexSans/IBMPlexSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/assets/font/IBMPlexSans/IBMPlexSans-SemiBold.woff2")
+      format("woff2"),
+    url("/assets/font/IBMPlexSans/IBMPlexSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/assets/font/IBMPlexSans/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("/assets/font/IBMPlexSans/IBMPlexSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// PT Root UI
+@font-face {
+  font-family: "PTRootUI";
+  src: url("/assets/font/PTRootUI/PTRootUI-Light.woff2") format("woff2"),
+    url("/assets/font/PTRootUI/PTRootUI-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PTRootUI";
+  src: url("/assets/font/PTRootUI/PTRootUI-Regular.woff2") format("woff2"),
+    url("/assets/font/PTRootUI/PTRootUI-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PTRootUI";
+  src: url("/assets/font/PTRootUI/PTRootUI-Medium.woff2") format("woff2"),
+    url("/assets/font/PTRootUI/PTRootUI-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PTRootUI";
+  src: url("/assets/font/PTRootUI/PTRootUI-Bold.woff2") format("woff2"),
+    url("/assets/font/PTRootUI/PTRootUI-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

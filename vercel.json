@@ -1,4 +1,14 @@
 {
-  "cleanUrls": false,
-  "trailingSlash": false
+  "buildCommand": "npm run build-storybook",
+  "outputDirectory": "storybook-static",
+  "installCommand": "npm ci",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {},
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.(js|css|woff|woff2|svg|png|jpg|jpeg|gif|ico|json|map|html)).*)$",
+      "destination": "/index.html"
+    }
+  ]
 }
