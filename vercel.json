@@ -4,7 +4,6 @@
   "installCommand": "npm ci",
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {},
   "rewrites": [
     {
       "source": "/((?!.*\\.(js|css|woff|woff2|svg|png|jpg|jpeg|gif|ico|json|map|html)).*)$",
