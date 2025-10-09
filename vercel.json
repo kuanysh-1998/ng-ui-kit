@@ -4,6 +4,13 @@
   "installCommand": "npm ci",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/ng-ui-kit/(.*)",
+      "destination": "/$1",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -25,20 +25,12 @@ const config: StorybookConfig = {
     };
 
     // Убираем publicPath для Vercel!
-    // if (config.output) {
-    //   config.output.publicPath = "/ng-ui-kit/";
-    // }
+    if (config.output) {
+      config.output.publicPath = "/";
+    }
 
     return config;
   },
-
-  // Убираем managerHead для Vercel!
-  // managerHead: (head) => {
-  //   return `
-  //     ${head}
-  //     <base href="/ng-ui-kit/">
-  //   `;
-  // },
 };
 
 export default config;

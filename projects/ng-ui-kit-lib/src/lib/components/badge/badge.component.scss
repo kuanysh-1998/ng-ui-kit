@@ -1,0 +1,264 @@
+.ng-badge {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+
+  &__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: default;
+    border-radius: 8px;
+
+    font-family: PTRootUI;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5%;
+
+    &_medium {
+      gap: 2px;
+      height: 24px;
+      padding: 4px 6px;
+
+      &.ng-badge__container_with-icon {
+        padding-left: 4px;
+      }
+
+      &.ng-badge__container_with-icon-right {
+        padding-right: 4px;
+      }
+
+      &.ng-badge__container_only-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        padding: 4px 4px;
+
+        .ng-badge__text {
+          display: none;
+        }
+      }
+    }
+
+    &_small {
+      gap: 2px;
+      height: 20px;
+      padding: 2px 4px;
+
+      &.ng-badge__container_with-icon {
+        padding-left: 4px;
+      }
+
+      &.ng-badge__container_with-icon-right {
+        padding-right: 4px;
+      }
+
+      &.ng-badge__container_only-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        padding: 4px 4px;
+
+        .ng-badge__text {
+          display: none;
+        }
+      }
+    }
+
+    &_large {
+      gap: 4px;
+      height: 28px;
+      padding: 6px 6px;
+      min-width: 69px;
+
+      &.ng-badge__container_only-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        padding: 4px 4px;
+
+        .ng-badge__text {
+          display: none;
+        }
+      }
+    }
+
+    &_contained {
+      &.ng-badge__container_default {
+        color: var(--white);
+        background: var(--brand-blue);
+
+        .ng-badge__icon {
+          fill: var(--white);
+        }
+      }
+
+      &.ng-badge__container_secondary {
+        color: var(--almost-black);
+        background: var(--gray-lightest);
+
+        .ng-badge__icon {
+          fill: var(--almost-black);
+        }
+      }
+
+      &.ng-badge__container_warning {
+        color: var(--white);
+        background: #d9822f;
+
+        .ng-badge__icon {
+          fill: var(--white);
+        }
+      }
+
+      &.ng-badge__container_error {
+        color: var(--white);
+        background: var(--error-red);
+
+        .ng-badge__icon {
+          fill: var(--white);
+        }
+      }
+
+      &.ng-badge__container_success {
+        color: var(--white);
+        background: var(--success-green);
+
+        .ng-badge__icon {
+          fill: var(--white);
+        }
+      }
+    }
+
+    &_outlined {
+      &.ng-badge__container_default {
+        color: var(--brand-blue);
+        background: var(--brand-blue-10);
+        border: 1px solid var(--brand-blue);
+
+        .ng-badge__icon {
+          fill: var(--brand-blue);
+        }
+      }
+
+      &.ng-badge__container_secondary {
+        color: var(--gray-dark);
+        background: var(--gray-lightest);
+        border: 1px solid var(--border-light);
+
+        .ng-badge__icon {
+          fill: var(--gray-dark);
+        }
+      }
+
+      &.ng-badge__container_error {
+        color: var(--error-red);
+        background: var(--error-red-light);
+        border: 1px solid var(--error-red);
+
+        .ng-badge__icon {
+          fill: var(--error-red);
+        }
+      }
+
+      &.ng-badge__container_success {
+        color: var(--success-green);
+        background: var(--success-green-light);
+        border: 1px solid var(--success-green);
+
+        .ng-badge__icon {
+          fill: var(--success-green);
+        }
+      }
+
+      &.ng-badge__container_warning {
+        color: #d9822f;
+        background: var(--warning-yellow-10);
+        border: 1px solid #d9822f;
+
+        .ng-badge__icon {
+          fill: #d9822f;
+        }
+      }
+    }
+
+    &_ghost {
+      &.ng-badge__container_default {
+        color: var(--brand-blue);
+
+        .ng-badge__icon {
+          fill: var(--brand-blue);
+        }
+      }
+
+      &.ng-badge__container_secondary {
+        color: var(--gray-dark);
+
+        .ng-badge__icon {
+          fill: var(--gray-dark);
+        }
+      }
+
+      &.ng-badge__container_warning {
+        color: #d9822f;
+
+        .ng-badge__icon {
+          fill: #d9822f;
+        }
+      }
+
+      &.ng-badge__container_error {
+        color: var(--error-red);
+
+        .ng-badge__icon {
+          fill: var(--error-red);
+        }
+      }
+
+      &.ng-badge__container_success {
+        color: var(--success-green);
+
+        .ng-badge__icon {
+          fill: var(--success-green);
+        }
+      }
+    }
+
+    &.ng-badge__container_is-icon {
+      width: auto;
+      height: auto;
+      min-width: 20px;
+      min-height: 20px;
+      padding: 2px;
+
+      .ng-badge__text {
+        display: block;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__icon {
+    &_clickable {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+  }
+}
