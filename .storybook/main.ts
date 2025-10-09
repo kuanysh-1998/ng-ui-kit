@@ -24,7 +24,20 @@ const config: StorybookConfig = {
       process: false,
     };
 
+    // Настройка publicPath для GitHub Pages
+    if (config.output) {
+      config.output.publicPath = "/ng-ui-kit/";
+    }
+
     return config;
+  },
+
+  // Добавляем base href
+  managerHead: (head) => {
+    return `
+      ${head}
+      <base href="/ng-ui-kit/">
+    `;
   },
 };
 

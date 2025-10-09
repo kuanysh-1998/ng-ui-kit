@@ -30,6 +30,10 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
+      # Добавьте эту строку для создания .nojekyll
+      - name: Add .nojekyll file
+        run: touch ./storybook-static/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
