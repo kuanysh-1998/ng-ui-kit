@@ -24,21 +24,21 @@ const config: StorybookConfig = {
       process: false,
     };
 
-    // Настройка publicPath для GitHub Pages
-    if (config.output) {
-      config.output.publicPath = "/ng-ui-kit/";
-    }
+    // Убираем publicPath для Vercel!
+    // if (config.output) {
+    //   config.output.publicPath = "/ng-ui-kit/";
+    // }
 
     return config;
   },
 
-  // Добавляем base href
-  managerHead: (head) => {
-    return `
-      ${head}
-      <base href="/ng-ui-kit/">
-    `;
-  },
+  // Убираем managerHead для Vercel!
+  // managerHead: (head) => {
+  //   return `
+  //     ${head}
+  //     <base href="/ng-ui-kit/">
+  //   `;
+  // },
 };
 
 export default config;
