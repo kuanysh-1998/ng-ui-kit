@@ -1,0 +1,38 @@
+<div class="ng-swiper__container">
+  <div
+    class="ng-swiper__wrapper"
+    [style.transform]="'translateX(' + translateX() + 'px)'"
+    [style.transition]="
+      isDragging() || !isTransitioning() ? 'none' : 'transform 0.3s ease-out'
+    "
+    (mousedown)="onDragStart($event)"
+    (touchstart)="onDragStart($event)"
+    (mousemove)="onDragMove($event)"
+    (touchmove)="onDragMove($event)"
+    (mouseup)="onDragEnd()"
+    (touchend)="onDragEnd()"
+    (mouseleave)="onDragEnd()"
+  >
+    @for (slide of extendedSlides(); track $index) {
+    <div class="ng-swiper__slide">
+      <img
+        [src]="slide.image"
+        [alt]="slide.alt || 'Slide ' + $index"
+        draggable="false"
+        class="ng-swiper__image"
+      />
+    </div>
+    }
+  </div>
+
+  <div class="ng-swiper__pagination">
+    @for (slide of slides(); track $index) {
+    <button
+      class="ng-swiper__dot"
+      [class.ng-swiper__dot_active]="getRealIndex() === $index"
+      (click)="goToSlide($index)"
+      [attr.aria-label]="'Go to slide ' + ($index + 1)"
+    ></button>
+    }
+  </div>
+</div>
